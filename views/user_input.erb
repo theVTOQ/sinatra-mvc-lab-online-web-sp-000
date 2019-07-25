@@ -6,10 +6,13 @@
   </head>
   <body>
     <h1>Pig Latinizer</h1>
-    <form action="/" method="POST">
+    <form action="/piglatinize" method="POST">
       <label for="string-to-convert">Enter your phrase: </label>
       <input type="text" id="string-to-convert" name="user_phrase">
       <input type="submit">
     </form>
+
+    <h2>Translation:</h2>
+    <p><%= @translation %></p>
   </body>
 </html>
