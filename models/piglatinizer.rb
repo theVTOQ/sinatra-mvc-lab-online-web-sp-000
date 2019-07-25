@@ -1,14 +1,11 @@
 class PigLatinizer
   @@vowels = ["a", "e", "i", "o", "u"]
 
-  def initialize(user_phrase)
-    @text = user_phrase.downcase
-  end
-
-  def translation
+  def translate(user_phrase)
+    text = user_phrase.downcase
     individual_translations = []
 
-    @text.split(" ").each do |word|
+    text.split(" ").each do |word|
       new_word = word
       first_letter = word[0]
 
