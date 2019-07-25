@@ -23,6 +23,8 @@ class PigLatinizer
       end
       individual_translations << new_word
     end
+
+    individual_translations.join(" ")
   end
 
   def get_prefix(word)
