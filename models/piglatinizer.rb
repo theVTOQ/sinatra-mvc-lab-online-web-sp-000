@@ -8,7 +8,6 @@ class PigLatinizer
   def translation
     individual_translations = []
 
-
     @text.split(" ").each do |word|
       new_word = word
       first_letter = word[0]
@@ -21,6 +20,7 @@ class PigLatinizer
         new_word.gsub(prefix, "")
         new_word << "#{prefix}ay"
       end
+
       individual_translations << new_word
     end
 
