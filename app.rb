@@ -2,6 +2,7 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   get '/' do
+    @translation = ""
     erb :user_input
   end
 
