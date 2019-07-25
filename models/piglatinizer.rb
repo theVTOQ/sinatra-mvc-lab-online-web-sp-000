@@ -21,6 +21,7 @@ class PigLatinizer
         new_word.gsub(prefix, "")
         new_word << "#{prefix}ay"
       end
+      individual_translations << new_word
     end
   end
 
