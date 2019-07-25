@@ -2,7 +2,8 @@ class PigLatinizer
   @@vowels = ["a", "e", "i", "o", "u"]
 
   def piglatinize(user_phrase)
-    text = user_phrase.downcase
+    text = user_phrase
+    #text = user_phrase.downcase
     individual_translations = []
 
     text.split(" ").each do |word|
@@ -12,7 +13,7 @@ class PigLatinizer
       if @@vowels.include?(first_letter)
         new_word[0] = ""
         new_word << "#{first_letter}way"
-        new_word.capitalize!
+        #new_word.capitalize!
       else
         prefix = get_prefix(word)
         new_word.gsub!(prefix, "")
