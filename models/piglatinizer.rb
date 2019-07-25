@@ -11,8 +11,7 @@ class PigLatinizer
       first_letter = word[0]
 
       if @@vowels.include?(first_letter)
-        new_word[0] = ""
-        new_word << "#{first_letter}way"
+        new_word << "way"
         #new_word.capitalize!
       else
         prefix = get_prefix(word)
