@@ -1,5 +1,5 @@
 class PigLatinizer
-  @@vowels = ["a", "e", "i", "o", "u"]
+  @@vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
 
   def piglatinize(user_phrase)
     text = user_phrase
