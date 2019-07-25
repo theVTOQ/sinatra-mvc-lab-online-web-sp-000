@@ -14,7 +14,7 @@ class PigLatinizer
         new_word << "#{first_letter}way"
       else
         prefix = get_prefix(word)
-        new_word.gsub(prefix, "")
+        new_word.gsub!(prefix, "")
         new_word << "#{prefix}ay"
       end
 
