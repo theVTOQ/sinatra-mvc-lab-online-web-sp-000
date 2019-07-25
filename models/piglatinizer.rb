@@ -1,7 +1,7 @@
 class PigLatinizer
   @@vowels = ["a", "e", "i", "o", "u"]
 
-  def translate(user_phrase)
+  def piglatinize(user_phrase)
     text = user_phrase.downcase
     individual_translations = []
 
