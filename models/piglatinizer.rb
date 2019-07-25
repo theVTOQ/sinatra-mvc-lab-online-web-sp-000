@@ -17,19 +17,20 @@ class PigLatinizer
         new_word[0] = ''
         new_word << "#{first_letter}way"
       else
-        last_initial_consonant = find_last_initial_consonant(word)
-        new_word.gsub(last_initial_consonant, )
+        prefix = get_prefix(word)
+        new_word.gsub(prefix, "")
+        new_word << "#{prefix}ay"
       end
     end
   end
 
-  def find_last_initial_consonant(word)
+  def get_prefix(word)
     prefix = ""
     index = 0
     until @@vowels.include?(word[index])
       prefix << word[index]
       index += 1
     end
-    word[index]
+    prefix
   end
 end
