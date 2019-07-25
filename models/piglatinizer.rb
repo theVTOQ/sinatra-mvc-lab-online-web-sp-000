@@ -26,10 +26,12 @@ class PigLatinizer
 
   def get_prefix(word)
     prefix = ""
-    index = 0
-    until @@vowels.include?(word[index])
-      prefix << word[index]
-      index += 1
+    word.chars.each do |char|
+      if @@vowels.include?(char)
+        return prefix
+      else
+        prefix << char
+      end
     end
     prefix
   end
